@@ -26,11 +26,18 @@ function MainPage() {
       },
     ]);
   };
+  function deleteData(id) {
+    const filterData = todos.filter((item) => {
+      return item.id !== id;
+    });
+
+    setTodos(filterData);
+  }
   return (
     <div>
       <hr className="horizon"></hr>
       <TodoInput add={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} delete={deleteData} />
     </div>
   );
 }
