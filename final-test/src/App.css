@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-wrapper{
+  height:600px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu-wrapper{
+  display:flex;
+  width:600px;
+  justify-content: space-around;
+}
+
+.btn-menu{
+  text-align: center;
+  width:90px;
+  height:20px;
+  /* border: solid 2px; */
+  /* background-color: #77A7FF; */
+  cursor: pointer;
+}
+.btn-menu:hover{
+  background-color: #77A7FF;
+}
+
+.todoInput-wrapper{
+  margin-top: 20px;
+}
+.horizon{
+  width: 600px;
+}
+.todolist-wrapper{
+  margin-top: 20px;
+}
