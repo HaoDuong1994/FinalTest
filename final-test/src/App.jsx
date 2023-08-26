@@ -22,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/active" element={<ActivePage />} />
+          <Route path="/complete" element={<CompletePage />} />
         </Routes>
       </Router>
     </>
