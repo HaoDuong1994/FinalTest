@@ -1,8 +1,17 @@
-function TodoInput() {
+import { useRef, useState, useEffect } from "react";
+
+function TodoInput(props) {
+  const inputRef = useRef(null);
+  console.log(props);
   return (
     <div className="todoInput-wrapper">
-      <input type="text" placeholder="add detail" />
-      <button>Add</button>
+      <input ref={inputRef} type="text" placeholder="add detail" />
+      <button
+        onClick={() => {
+          props.add(inputRef.current.value);
+        }}>
+        Add
+      </button>
     </div>
   );
 }
