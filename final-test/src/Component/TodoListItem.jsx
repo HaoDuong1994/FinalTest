@@ -1,10 +1,17 @@
 function TodoListItem(props) {
-  const { title } = props.data;
+  const { title, id } = props.data;
+  console.log(id);
+  console.log(props);
   return (
     <div>
       <span>{title}</span>
       <span>
-        <button>Hoàn thành</button>
+        <button
+          onClick={() => {
+            props.delete(id);
+          }}>
+          Hoàn thành
+        </button>
       </span>
     </div>
   );
