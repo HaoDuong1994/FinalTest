@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import MainPage from "./page/MainPage";
 import ActivePage from "./page/ActivePage";
 import TodoMenu from "./Component/TodoMenu";
+import CompletePage from "./page/CompletePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   useEffect(() => {
