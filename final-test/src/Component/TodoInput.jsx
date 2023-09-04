@@ -1,14 +1,16 @@
 import { useRef, useState, useEffect } from "react";
+import { useContext } from "react";
+import { TodoContext } from "../App";
 
-function TodoInput(props) {
+function TodoInput() {
   const inputRef = useRef(null);
-  console.log(props);
+  const { addTodo } = useContext(TodoContext);
   return (
     <div className="todoInput-wrapper">
       <input ref={inputRef} type="text" placeholder="add detail" />
       <button
         onClick={() => {
-          props.add(inputRef.current.value);
+          addTodo(inputRef.current.value);
         }}>
         Add
       </button>

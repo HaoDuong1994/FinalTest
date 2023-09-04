@@ -1,13 +1,13 @@
 import TodoListItem from "./TodoListItem";
-import { useState } from "react";
-function TodoList(props) {
-  console.log(props);
-  const { todos } = props;
-  console.log(props.delete);
+import { useState, useContext } from "react";
+import { TodoContext } from "../App";
+function TodoList() {
+  const { todos } = useContext(TodoContext);
+  console.log(todos);
   return (
     <div className="todolist-wrapper">
-      {todos.map((todo) => {
-        return <TodoListItem data={todo} delete={props.delete} />;
+      {todos.map((todo, index) => {
+        return <TodoListItem key={crypto.randomUUID()} todo={todo} />;
       })}
     </div>
   );

@@ -1,14 +1,18 @@
+import { useContext } from "react";
+import { TodoContext } from "../App";
 function TodoListItem(props) {
-  const { title, id } = props.data;
-  console.log(id);
-  console.log(props);
+  const { title, id } = props.todo;
+  const { deleteItem } = useContext(TodoContext);
   return (
     <div>
       <span>{title}</span>
-      <span>
+      <span
+        style={{
+          marginLeft: "32px",
+        }}>
         <button
           onClick={() => {
-            props.delete(id);
+            deleteItem(id);
           }}>
           Hoàn thành
         </button>

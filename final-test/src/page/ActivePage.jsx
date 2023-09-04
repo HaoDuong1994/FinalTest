@@ -1,4 +1,17 @@
+import { useContext } from "react";
+import { TodoContext } from "../App";
 function ActivePage() {
-  return <div>Hello activePage</div>;
+  const { todos } = useContext(TodoContext);
+  return (
+    <div>
+      {todos.map((todo) => {
+        return (
+          <div>
+            <div>{todo.title}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 export default ActivePage;
